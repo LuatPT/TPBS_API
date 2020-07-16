@@ -12,7 +12,7 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">  
   
     <!-- Provide support for component scanning -->  
-    <context:component-scan base-package="controller" />  
+    <context:component-scan base-package="api" />  
     
     <!--Provide support for conversion, formatting and validation -->  
     <mvc:annotation-driven/>   
@@ -36,7 +36,7 @@
 		<property name="dataSource" ref="ds"></property>
 	</bean>
 	<!-- Khai bao DAO -->
-	<bean id="mayDAO" class="sample.dao.MayDAO">    
+	<!-- <bean id="mayDAO" class="sample.dao.MayDAO">    
 		<property name="template" ref="jt"></property>    
-	</bean>       
+	</bean>   -->     
 </beans>  

@@ -94,6 +94,12 @@
 			<version>2.2.1.RELEASE</version>
 		</dependency>
 		<dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-tomcat</artifactId>
+	        <version>2.2.1.RELEASE</version>
+	        <scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
@@ -114,7 +120,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>TPBS_API_MAIN</finalName>
+		<finalName>TPBSAPIMAIN</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

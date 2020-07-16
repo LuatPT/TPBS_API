@@ -1,4 +1,4 @@
-package model;
+package api.model;
 
 public class TrainerInfo  {
 	private int trainerId;
