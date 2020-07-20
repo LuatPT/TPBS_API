@@ -36,7 +36,7 @@
 		<property name="dataSource" ref="ds"></property>
 	</bean>
 	<!-- Khai bao DAO -->
-	<!-- <bean id="mayDAO" class="sample.dao.MayDAO">    
+	<bean id="trainerDao" class="api.dao.TrainerDao">    
 		<property name="template" ref="jt"></property>    
-	</bean>   -->     
+	</bean>  
 </beans>  
