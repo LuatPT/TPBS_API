@@ -1,22 +1,18 @@
 package api.service;
 
 import java.util.List;
+import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
-
-import api.dao.TrainerDao;
 import api.entity.Trainer;
 
-@Service
-@Repository
-public class TrainerService{
-	@Autowired
-	TrainerDao trainerDao ;
+public interface TrainerService{
 	
-	public List<Trainer> getAllTrainer() {
-		return trainerDao.getAllTrainerDao();
-	}
+	List<Trainer> findAllTrainer();
+	
+    Optional<Trainer> findById(Integer id);
+    
+    void save(Trainer trainer);
+    
+    void remove(Trainer trainer);
 
 }

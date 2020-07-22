@@ -16,12 +16,15 @@ import api.service.TrainerService;
 @RequestMapping("/api")
 public class TrainerController {
 
+	private TrainerService trainerService;
 	@Autowired
-	TrainerService trainerService;
-	
-	@RequestMapping(value = "/trainers", method = RequestMethod.GET)
+	public TrainerController(TrainerService trainerService) {
+		this.trainerService = trainerService;
+	}
+
+	@RequestMapping(value = "/trainers/", method = RequestMethod.GET)
 	public ResponseEntity<List<Trainer>> listAllTrainer(){
-		List<Trainer> listTrainer= trainerService.getAllTrainer();
+		List<Trainer> listTrainer= trainerService.findAllTrainer();
 		return new ResponseEntity<List<Trainer>>(listTrainer, HttpStatus.OK);
 	}
 }
