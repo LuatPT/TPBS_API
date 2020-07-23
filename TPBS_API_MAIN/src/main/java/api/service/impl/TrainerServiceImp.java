@@ -14,7 +14,7 @@ import api.service.TrainerService;
 public class TrainerServiceImp implements TrainerService {
 	
 	private TrainerRepository trainerRepository;
-
+ 
 	@Autowired
 	public TrainerServiceImp(TrainerRepository trainerRepository) {
 		this.trainerRepository = trainerRepository;

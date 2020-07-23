@@ -87,7 +87,7 @@ public class Trainer implements Serializable {
 
 	public String getTrainerCost() {
 		return trainerCost;
-	}
+	} 
 
 	public void setTrainerCost(String trainerCost) {
 		this.trainerCost = trainerCost;

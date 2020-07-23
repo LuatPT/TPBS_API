@@ -7,7 +7,7 @@ import api.entity.Trainer;
 
 public interface TrainerService{
 	
-	List<Trainer> findAllTrainer();
+	List<Trainer> findAllTrainer(); 
 	
     Optional<Trainer> findById(Integer id);
     

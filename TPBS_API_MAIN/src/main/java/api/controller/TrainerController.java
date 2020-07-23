@@ -31,7 +31,7 @@ public class TrainerController {
 	@RequestMapping(value = "/trainers", method = RequestMethod.GET)
 	public ResponseEntity<List<Trainer>> listAllTrainer() {
 		List<Trainer> listTrainer = trainerService.findAllTrainer();
-		return new ResponseEntity<List<Trainer>>(listTrainer, HttpStatus.OK);
+		return new ResponseEntity<List<Trainer>>(listTrainer, HttpStatus.OK); 
 	}
 
 	@RequestMapping(value = "/trainers/{trainer_id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
