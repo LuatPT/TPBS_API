@@ -19,6 +19,7 @@ import api.entity.Trainer;
 import api.service.TrainerService;
 
 @RestController
+@RequestMapping(value = "/api")
 public class TrainerController {
 
 	private TrainerService trainerService;
