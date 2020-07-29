@@ -1,4 +1,4 @@
-package api.service.impl;
+package com.api.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import api.entity.Trainer;
-import api.repository.TrainerRepository;
-import api.service.TrainerService;
+import com.api.entity.Trainer;
+import com.api.repository.TrainerRepository;
+import com.api.service.TrainerService;
 
 @Service
 public class TrainerServiceImp implements TrainerService {

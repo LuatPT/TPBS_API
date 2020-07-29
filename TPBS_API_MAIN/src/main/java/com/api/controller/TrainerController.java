@@ -1,4 +1,4 @@
-package api.controller;
+package com.api.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,11 +15,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import api.entity.Trainer;
-import api.service.TrainerService;
+import com.api.entity.Trainer;
+import com.api.service.TrainerService;
 
 @RestController
-@RequestMapping(value = "/api")
 public class TrainerController {
 
 	private TrainerService trainerService;

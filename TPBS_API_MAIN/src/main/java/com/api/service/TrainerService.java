@@ -1,9 +1,9 @@
-package api.service;
+package com.api.service;
 
 import java.util.List;
 import java.util.Optional;
 
-import api.entity.Trainer;
+import com.api.entity.Trainer;
 
 public interface TrainerService{
 	
