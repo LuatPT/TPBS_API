@@ -6,12 +6,12 @@
 	<artifactId>TPBS_API_MAIN</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>TPBS_API_MAIN Maven Webapp</name>
+	<name>TPBS_API_MAIN</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
+		<java.version>1.10</java.version>
 	</properties>
 	<dependencies>
 		<!--json-->
@@ -63,6 +63,11 @@
 	 </dependency>
 	 <dependency>
 	     <groupId>org.springframework.boot</groupId>
+	     <artifactId>spring-boot-starter</artifactId>
+	     <version>2.3.0.RELEASE</version>
+	 </dependency>
+	 <dependency>
+	     <groupId>org.springframework.boot</groupId>
 	     <artifactId>spring-boot-starter-actuator</artifactId>
 	     <version>2.3.0.RELEASE</version>
 	 </dependency>
@@ -74,8 +79,20 @@
 	 <dependency>
 	     <groupId>org.springframework.boot</groupId>
 	     <artifactId>spring-boot-starter-web</artifactId>
-	      <version>2.3.0.RELEASE</version>
-	 </dependency>
+	     <version>2.3.0.RELEASE</version>
+	     <exclusions>
+	     	<exclusion>
+                   <groupId>org.springframework.boot</groupId>
+                   <artifactId>spring-boot-starter-tomcat</artifactId>
+            </exclusion>
+         </exclusions>
+     </dependency>
+     <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-tomcat</artifactId>
+         <scope>provided</scope>
+          <version>2.3.0.RELEASE</version>
+     </dependency>
 	 <dependency>
 	     <groupId>org.springframework.boot</groupId>
 	     <artifactId>spring-boot-starter-web-services</artifactId>
@@ -103,7 +120,6 @@
 	 
 	</dependencies>
 	<build>
-		<finalName>TPBSAPIMAIN</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

@@ -19,6 +19,7 @@ import com.api.entity.Trainer;
 import com.api.service.TrainerService;
 
 @RestController
+@RequestMapping("/api")
 public class TrainerController {
 
 	private TrainerService trainerService;
@@ -28,7 +29,7 @@ public class TrainerController {
 		this.trainerService = trainerService;
 	}
 
-	@RequestMapping(value = "/trainers", method = RequestMethod.GET)
+	@RequestMapping(value = "/trainers/", method = RequestMethod.GET)
 	public ResponseEntity<List<Trainer>> listAllTrainer() {
 		List<Trainer> listTrainer = trainerService.findAllTrainer();
 		return new ResponseEntity<List<Trainer>>(listTrainer, HttpStatus.OK); 
