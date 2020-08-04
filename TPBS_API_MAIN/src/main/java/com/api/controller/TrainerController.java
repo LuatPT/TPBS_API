@@ -29,7 +29,7 @@ public class TrainerController {
 		this.trainerService = trainerService;
 	}
 
-	@RequestMapping(value = "/trainers/", method = RequestMethod.GET)
+	@RequestMapping(value = "/trainers", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Trainer>> listAllTrainer() {
 		List<Trainer> listTrainer = trainerService.findAllTrainer();
 		return new ResponseEntity<List<Trainer>>(listTrainer, HttpStatus.OK); 

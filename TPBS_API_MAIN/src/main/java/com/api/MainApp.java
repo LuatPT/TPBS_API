@@ -1,4 +1,4 @@
-package com.api.mainapp;
+package com.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,9 +9,9 @@ import com.api.controller.TrainerController;
 
 @SpringBootApplication
 @ComponentScan(basePackageClasses = TrainerController.class, basePackages = "com.api.controller")
-public class MainApplication extends SpringBootServletInitializer{
+public class MainApp extends SpringBootServletInitializer{
 	public static void main(String[] args) {
-		SpringApplication.run(MainApplication.class, args);
+		SpringApplication.run(MainApp.class, args);
 	}
 
 }
